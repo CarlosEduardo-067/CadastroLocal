@@ -1,6 +1,6 @@
-# Avaliação Sprint 1 - Programa de Bolsas Compass UOL AWS - Turma Janeiro/2025
+# CadastroLocal
 
-Este projeto faz parte da avaliação da primeira sprint do programa de bolsas Compass UOL para formação em Inteligência Artificial para AWS. O objetivo é desenvolver um sistema simples de cadastro utilizando JavaScript, com armazenamento de dados no navegador através do **localStorage**.
+O objetivo é desenvolver um sistema simples de cadastro utilizando JavaScript, com armazenamento de dados no navegador através do **localStorage**.
 
 ## 📋 Especificações
 
@@ -26,13 +26,13 @@ O sistema desenvolvido permite o armazenamento e manipulação de dados cadastra
 ### 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/Compass-pb-aws-2025-06-JANEIRO/sprint-1-pb-aws-janeiro
+git clone https://github.com/CarlosEduardo-067/CadastroLocal.git
 ```
 
 ### 2. Acesse o diretório do projeto:
 
 ```bash
-cd sprint-1-pb-aws-janeiro
+cd CadastroLocal/
 ```
 
 ### 3. Abra os arquivos HTML em seu navegador:
