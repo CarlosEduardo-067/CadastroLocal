@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="/src/Styles/estiloIndex.css">
+</head>
+<body>
+    <h1>Lista de Usuários</h1>
+    <table>
+        <tr>
+          <th>Nome</th>
+          <th>Data de Nascimento</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+      </table>
+      <button onclick="voltarParaCadastro()">Voltar</button>
+
+      <script>
+        function carregarTabela() {
+        const usuarios = JSON.parse(localStorage.getItem('resultadoConsulta')) || JSON.parse(localStorage.getItem('usuarios')) || [];
+        const tabela = document.querySelector('table');
+
+        while (tabela.rows.length > 1) {
+            tabela.deleteRow(1);
+        }
+
+        if (usuarios.length > 0) {
+            usuarios.forEach(user => {
+                const row = tabela.insertRow();
+                row.innerHTML = `
+                    <td>${user.nome}</td>
+                    <td>${user.dataNascimento}</td>
+                    <td>${user.telefone}</td>
+                    <td>${user.email}</td>
+                    <td><button onclick="usuarioRemover('${user.nome}')">Remover</button></td>
+                `;
+            });
+        } else {
+            console.log("Nenhum usuário encontrado.");
+        }
+          localStorage.removeItem('resultadoConsulta');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            carregarTabela();
+        });
+        
+        //Função das regras de negócio
+        function usuarioRemover(nome) {
+            let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+            const index = usuarios.findIndex(user => user.nome === nome);
+
+            if (index !== -1) {
+                usuarios.splice(index, 1);
+                localStorage.removeItem('usuarios');
+                localStorage.setItem('usuarios', JSON.stringify(usuarios));
+                alert(`Usuário "${nome}" removido com sucesso!`);
+                carregarTabela();
+            }
+        }
+
+        //Função de movimento da página
+        function voltarParaCadastro() {
+            window.location.href = 'cadastro.html';
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,83 @@
+body{
+    background-color: #f4f4f9;
+}
+#secaoCadastro form {
+    background-color: #fff; 
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-align: left; 
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+#secaoCadastro label, input {
+    display: block;
+    width: 100%; 
+    margin-bottom: 15px; 
+}
+
+#secaoCadastro input, button {
+    padding: 10px; 
+    font-size: 16px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#btnCadastrar, #btnNovo, #btnConsultar {
+    display: block;
+    width: 100%; 
+    margin-bottom: 15px;
+    background-color: #007bff; 
+    color: #fff; 
+    cursor: pointer; 
+    border: none;
+}
+
+#btnCadastrar:hover, #btnNovo:hover, #btnConsultar:hover {
+    background-color: #0056b3;  
+}
+
+section{
+    height: 100vh;        
+    padding: 20px;       
+    box-sizing: border-box; 
+    overflow: auto;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+#secao1 div{
+    background-color: #fff; 
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-align: left; 
+    width: 400px;
+}
+
+#secao1 input {
+    padding: 10px; 
+    font-size: 16px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 95%;
+}
+
+#btnConsultaTodos, #btnConsultaNome {
+    margin-bottom: 15px;
+    background-color: #007bff; 
+    color: #fff; 
+    cursor: pointer; 
+    border: none;
+}
+
+#btnConsultaTodos:hover, #btnConsultaNome:hover {
+    background-color: #0056b3;  
+}
